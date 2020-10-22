@@ -3,6 +3,15 @@ package main
 import "fmt"
 
 // Fibonacci _______________________________________________________________
+func fibonacci(n int) int {
+	if n == 0 {
+		return 0
+	}
+	if n == 1 {
+		return 1
+	}
+	return fibonacci(n-1) + fibonacci(n-2)
+}
 
 // Variadic Function ... Número más grande__________________________________
 func bigger_num(arg ...int) int {
@@ -49,7 +58,10 @@ func main() {
 		switch {
 		// Fibonacci _______________________________________________________________
 		case opc == 1:
-			fmt.Println("Fibo")
+			var n int
+			fmt.Println("Dame un número ")
+			fmt.Scan(&n)
+			fmt.Println(fibonacci(n))
 
 		// Variadic Function ... Número más grande__________________________________
 		case opc == 2:
