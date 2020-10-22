@@ -59,7 +59,7 @@ func main() {
 		// Fibonacci _______________________________________________________________
 		case opc == 1:
 			var n int
-			fmt.Println("Dame un número ")
+			fmt.Println("En qúe número calcular la serie: ")
 			fmt.Scan(&n)
 			fmt.Println(fibonacci(n))
 
